@@ -1,0 +1,57 @@
+{
+    "name": "Ubidots",
+    "description": "Connect, Develop, and Deploy IoT Applications with Ubidots Intuative IoT Development Platform",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1981-ubidots.jpg",
+    "tags": [
+        "have api",
+        "internet of things",
+        "sensors"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/ubidots\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "Ubidots",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1981-ubidots.jpg",
+            "humanURL": "http:\/\/ubidots.com\/",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/ubidots-openapi.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/ubidots"
+        },
+        {
+            "type": "Email",
+            "url": "sales@ubidots.com"
+        },
+        {
+            "type": "Email",
+            "url": "support@ubidots.com"
+        },
+        {
+            "type": "Github",
+            "url": "https:\/\/github.com\/ubidots"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/ubidots"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/ubidots.com\/"
+        }
+    ]
+}
