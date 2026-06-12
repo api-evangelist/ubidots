@@ -113,6 +113,12 @@ common:
     url: https://raw.githubusercontent.com/api-evangelist/ubidots/refs/heads/main/rate-limits/ubidots-rate-limits.yml
   - type: FinOps
     url: https://raw.githubusercontent.com/api-evangelist/ubidots/refs/heads/main/finops/ubidots-finops.yml
+  - type: BlogRSS
+    url: https://ubidots.com/blog/rss/
+  - type: Blogs
+    url: https://raw.githubusercontent.com/api-evangelist/ubidots/refs/heads/main/blogs/blogs.json
+  - type: JsonLdContext
+    url: https://raw.githubusercontent.com/api-evangelist/ubidots/refs/heads/main/json-ld/ubidots-context.jsonld
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

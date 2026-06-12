@@ -1,0 +1,69 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "ubidots": "https://ubidots.com/vocab#",
+    "aid": "ubidots:aid",
+    "dot": "ubidots:dot",
+    "device": "ubidots:device",
+    "variable": "ubidots:variable",
+    "dashboard": "ubidots:dashboard",
+    "organization": "ubidots:organization",
+    "ubifunction": "ubidots:ubifunction",
+    "token": "ubidots:token",
+    "event": "ubidots:event",
+    "deviceGroup": "ubidots:deviceGroup",
+    "deviceType": "ubidots:deviceType",
+    "page": "ubidots:page"
+  },
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://ubidots.com",
+      "name": "Ubidots",
+      "url": "https://ubidots.com",
+      "sameAs": [
+        "https://github.com/ubidots",
+        "https://www.linkedin.com/company/ubidots",
+        "https://x.com/ubidots"
+      ],
+      "description": "Industrial AIoT platform for OEMs, system integrators, and engineering firms to ingest, visualize, and act on IoT device telemetry at scale."
+    },
+    {
+      "@type": "WebAPI",
+      "@id": "https://industrial.api.ubidots.com/api/v1.6",
+      "name": "Ubidots Data API v1.6",
+      "provider": { "@id": "https://ubidots.com" },
+      "documentation": "https://docs.ubidots.com/v1.6/reference/http",
+      "description": "REST endpoints for sending and retrieving time-series data (dots) from IoT devices; supports device and variable CRUD and historical data retrieval.",
+      "termsOfService": "https://ubidots.com/legal/",
+      "potentialAction": {
+        "@type": "ConsumeAction",
+        "target": "https://industrial.api.ubidots.com/api/v1.6"
+      }
+    },
+    {
+      "@type": "WebAPI",
+      "@id": "https://industrial.api.ubidots.com/api/v2.0",
+      "name": "Ubidots Data API v2",
+      "provider": { "@id": "https://ubidots.com" },
+      "documentation": "https://docs.ubidots.com/reference/welcome",
+      "description": "Advanced REST API with filtering, sorting, bulk async operations, dynamic field responses, and full CRUD for Devices, Variables, Organizations, Device Groups, Device Types, and Dashboards.",
+      "potentialAction": {
+        "@type": "ConsumeAction",
+        "target": "https://industrial.api.ubidots.com/api/v2.0"
+      }
+    },
+    {
+      "@type": "WebAPI",
+      "@id": "mqtt://industrial.api.ubidots.com",
+      "name": "Ubidots MQTT API",
+      "provider": { "@id": "https://ubidots.com" },
+      "documentation": "https://help.ubidots.com/en/collections/356495-developer-guides",
+      "description": "Lightweight MQTT broker for IoT device telemetry ingestion; devices publish dots to Ubidots broker topics and subscribe to receive configuration or command payloads.",
+      "potentialAction": {
+        "@type": "ConsumeAction",
+        "target": "mqtt://industrial.api.ubidots.com"
+      }
+    }
+  ]
+}
