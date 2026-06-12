@@ -1,0 +1,140 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+provider: Ubidots
+providerId: ubidots
+created: '2026-06-12'
+modified: '2026-06-12'
+reconciled: true
+url: https://ubidots.com/pricing
+billingModel:
+  type: subscription_plus_metered
+  description: >
+    Ubidots charges a monthly base subscription (Professional at $99/month;
+    Industrial and Enterprise at custom pricing) that includes a device
+    allowance, monthly data-point quota, throughput cap, and execution
+    allowances for events and UbiFunctions. Overages on devices, events,
+    UbiFunctions, and email alerts are billed on a pay-as-you-go metered basis
+    on top of the base fee. Industrial and Enterprise tiers are negotiated
+    contracts without published per-unit overage rates.
+  currency: USD
+  billingPeriod: monthly
+focusColumns:
+  - name: ServiceName
+    value: Ubidots IoT Platform
+  - name: ServiceCategory
+    value: Internet of Things / Analytics
+  - name: ChargeType
+    values:
+      - Usage
+      - Subscription
+  - name: BillingCurrency
+    value: USD
+  - name: UsageUnit
+    values:
+      - device
+      - dot
+      - execution
+      - alert
+  - name: SkuName
+    values:
+      - Professional Base Subscription
+      - Extra Device
+      - Extra Event Execution
+      - Extra UbiFunction Execution
+      - Extra Email Alert
+      - Industrial Custom
+      - Enterprise Custom
+meters:
+  - name: Base Subscription Fee
+    unit: month
+    description: Fixed monthly fee for the chosen plan tier.
+    plans:
+      - name: Professional
+        price: 99.00
+        currency: USD
+  - name: Device Allotment
+    unit: device
+    description: >
+      Devices included in the base subscription. Professional includes 50
+      devices; Industrial and Enterprise are negotiated.
+    plans:
+      - name: Professional
+        includedUnits: 50
+        overagePrice: 2.00
+        currency: USD
+        maxOverageUnits: 950
+  - name: Data Points (Dots)
+    unit: dot
+    description: >
+      Time-series data values ingested per month. Professional includes 10M
+      dots/month with 6-month retention; Industrial and Enterprise plans have
+      custom allocations and 24-month+ retention.
+    plans:
+      - name: Professional
+        includedUnits: 10000000
+        overagePrice: null
+        note: Overage not published; throughput cap enforces limit implicitly.
+  - name: Event Executions
+    unit: execution
+    description: >
+      Triggered event rule executions per month. Professional includes 1,000;
+      overages billed at $10 per million executions.
+    plans:
+      - name: Professional
+        includedUnits: 1000
+        overagePrice: 10.00
+        overageUnit: million_executions
+        currency: USD
+  - name: UbiFunctions Executions
+    unit: execution
+    description: >
+      Serverless function invocations per month. Professional includes 1,000;
+      overages billed at $5 per million executions.
+    plans:
+      - name: Professional
+        includedUnits: 1000
+        overagePrice: 5.00
+        overageUnit: million_executions
+        currency: USD
+  - name: Email Alerts
+    unit: alert
+    description: >
+      Outbound email alert notifications per month. Professional includes 100;
+      overages billed at $2 per 1,000 alerts.
+    plans:
+      - name: Professional
+        includedUnits: 100
+        overagePrice: 2.00
+        overageUnit: thousand_alerts
+        currency: USD
+  - name: SMS/Voice Alerts
+    unit: alert
+    description: >
+      SMS and voice alert notifications. Professional includes 10 alerts;
+      additional alerts billed at country-specific rates.
+    plans:
+      - name: Professional
+        includedUnits: 10
+        overagePrice: null
+        note: Country-based pricing; consult Ubidots for rates.
+principles:
+  - name: Visibility
+    description: >
+      Ubidots exposes device count, dot throughput, and execution usage within
+      the platform dashboard. Plan limits and overage triggers can be monitored
+      through the account management interface, giving operators visibility into
+      consumption before overages accrue.
+  - name: Optimization
+    description: >
+      Right-size deployments by choosing appropriate throughput tiers (6, 20,
+      50, 100, 200, or 1,000 dots/second). Use configurable per-token rate
+      limit windows (1s, 1min, 5min) to smooth burst traffic and avoid
+      unnecessary token quota exhaustion. Consolidate telemetry payloads to
+      stay within the 10,000 byte per-request limit and reduce per-request
+      overhead.
+  - name: Governance
+    description: >
+      Industrial and Enterprise tiers offer organizational token scoping, admin
+      user controls, and SSO (Enterprise only) to enforce least-privilege access
+      to API credentials. Token revocability supports rapid credential rotation
+      without account-level disruption.

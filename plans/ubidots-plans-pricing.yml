@@ -1,0 +1,250 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+provider: Ubidots
+providerId: ubidots
+created: '2026-06-12'
+modified: '2026-06-12'
+reconciled: true
+url: https://ubidots.com/pricing
+plans:
+  - name: STEM
+    description: >
+      Free educational tier for non-commercial and student projects. Includes
+      3 devices and limited data retention. Not intended for production
+      deployments.
+    type: free
+    url: https://stem.ubidots.com
+    quotas:
+      - name: Devices
+        metric: devices
+        limit: 3
+        timeFrame: allotment
+        scope: account
+    metered: []
+    boolean:
+      - name: Commercial Use
+        feature: commercialUse
+        value: false
+  - name: Professional
+    description: >
+      Entry-level paid plan for prototyping and small production deployments.
+      Includes 50 devices, 10M data points per month with 6-month retention,
+      6 dots/second sustained throughput, 1,000 event executions, 100 email
+      alerts, and up to 5 end users and 5 organizations. 30-day free trial
+      available.
+    type: paid
+    url: https://ubidots.com/pricing
+    price:
+      amount: 99
+      currency: USD
+      period: month
+    quotas:
+      - name: Devices Included
+        metric: devices
+        limit: 50
+        timeFrame: allotment
+        scope: account
+      - name: Data Points (Dots)
+        metric: data_points
+        limit: 10000000
+        timeFrame: month
+        scope: account
+      - name: Data Retention
+        metric: retention_months
+        limit: 6
+        timeFrame: allotment
+        scope: account
+      - name: Sustained Throughput
+        metric: dots_per_second
+        limit: 6
+        timeFrame: second
+        scope: account
+      - name: Burst Throughput (hourly)
+        metric: dots_per_second_burst
+        limit: 12
+        timeFrame: hour
+        scope: account
+      - name: Event Executions
+        metric: event_executions
+        limit: 1000
+        timeFrame: month
+        scope: account
+      - name: UbiFunctions Executions
+        metric: ubifunction_executions
+        limit: 1000
+        timeFrame: month
+        scope: account
+      - name: Email Alerts
+        metric: email_alerts
+        limit: 100
+        timeFrame: month
+        scope: account
+      - name: SMS/Voice Alerts
+        metric: sms_voice_alerts
+        limit: 10
+        timeFrame: month
+        scope: account
+      - name: End Users
+        metric: end_users
+        limit: 5
+        timeFrame: allotment
+        scope: account
+      - name: Organizations
+        metric: organizations
+        limit: 5
+        timeFrame: allotment
+        scope: account
+      - name: Admin Users
+        metric: admin_users
+        limit: 1
+        timeFrame: allotment
+        scope: account
+    metered:
+      - name: Extra Devices
+        metric: devices
+        price: 2.00
+        currency: USD
+        unit: device
+        maxUnits: 1000
+      - name: Extra Event Executions
+        metric: event_executions
+        price: 10.00
+        currency: USD
+        unit: million_executions
+      - name: Extra UbiFunctions
+        metric: ubifunction_executions
+        price: 5.00
+        currency: USD
+        unit: million_executions
+      - name: Extra Email Alerts
+        metric: email_alerts
+        price: 2.00
+        currency: USD
+        unit: thousand_alerts
+    boolean:
+      - name: Dashboards
+        feature: dashboards
+        value: true
+      - name: White Label
+        feature: whiteLabel
+        value: false
+      - name: Custom Branded Apps
+        feature: customBrandedApps
+        value: false
+      - name: SSO
+        feature: sso
+        value: false
+      - name: SLA
+        feature: sla
+        value: false
+      - name: Free Trial
+        feature: freeTrial
+        value: true
+  - name: Industrial
+    description: >
+      Mid-tier plan for production deployments requiring higher throughput,
+      longer data retention, and custom branding. Supports 1 to thousands of
+      devices, 20 dots/second sustained throughput, 24-month data retention,
+      up to 10 admin users, and advanced plugins. Pricing is custom and
+      negotiated with the Ubidots sales team.
+    type: enterprise
+    url: https://ubidots.com/pricing
+    price:
+      amount: 0
+      currency: USD
+      period: month
+      custom: true
+    quotas:
+      - name: Sustained Throughput
+        metric: dots_per_second
+        limit: 20
+        timeFrame: second
+        scope: account
+      - name: Burst Throughput
+        metric: dots_per_second_burst
+        limit: 40
+        timeFrame: hour
+        scope: account
+      - name: Data Retention
+        metric: retention_months
+        limit: 24
+        timeFrame: allotment
+        scope: account
+      - name: Admin Users
+        metric: admin_users
+        limit: 10
+        timeFrame: allotment
+        scope: account
+    boolean:
+      - name: Custom Branded Apps
+        feature: customBrandedApps
+        value: true
+      - name: Advanced Plugins
+        feature: advancedPlugins
+        value: true
+      - name: White Label
+        feature: whiteLabel
+        value: true
+      - name: SSO
+        feature: sso
+        value: false
+      - name: SLA
+        feature: sla
+        value: false
+  - name: Enterprise
+    description: >
+      Top-tier plan for large-scale or mission-critical deployments requiring
+      private cloud options, SSO, SLAs, dedicated technical account managers,
+      and 24-hour support response times. Supports 100 dots/second sustained
+      (up to 1,000 on dedicated private deployment) and 24+ months data
+      retention. All resources are custom configured.
+    type: enterprise
+    url: https://ubidots.com/pricing
+    price:
+      amount: 0
+      currency: USD
+      period: month
+      custom: true
+    quotas:
+      - name: Sustained Throughput
+        metric: dots_per_second
+        limit: 100
+        timeFrame: second
+        scope: account
+        note: Up to 1000 dots/s on dedicated private deployment
+      - name: Burst Throughput
+        metric: dots_per_second_burst
+        limit: 200
+        timeFrame: hour
+        scope: account
+      - name: Data Retention
+        metric: retention_months
+        limit: 24
+        timeFrame: allotment
+        scope: account
+        note: Configurable beyond 24 months
+      - name: Admin Users
+        metric: admin_users
+        limit: 10
+        timeFrame: allotment
+        scope: account
+        note: Configurable beyond 10
+    boolean:
+      - name: SSO
+        feature: sso
+        value: true
+      - name: SLA
+        feature: sla
+        value: true
+      - name: Private Deployment
+        feature: privateDeployment
+        value: true
+      - name: Technical Account Manager
+        feature: technicalAccountManager
+        value: true
+      - name: Custom Branded Apps
+        feature: customBrandedApps
+        value: true
+      - name: White Label
+        feature: whiteLabel
+        value: true

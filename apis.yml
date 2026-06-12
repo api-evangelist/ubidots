@@ -1,0 +1,118 @@
+aid: ubidots
+name: Ubidots
+description: >
+  Ubidots is an Industrial AIoT platform designed for OEMs, system integrators,
+  and engineering firms that need to ingest, visualize, and act on device
+  telemetry at scale. The platform exposes a REST API (v1.6 and v2) and an MQTT
+  API for sending and retrieving time-series data from IoT sensors and devices.
+  Developers can manage devices, variables, dashboards, organizations, and
+  event-triggered alerts programmatically, while serverless UbiFunctions enable
+  custom processing logic without managing infrastructure. Authentication uses
+  short-lived or persistent tokens passed via the X-Auth-Token header or URL
+  parameter, and throughput is gated per plan from 6 dots per second
+  (Professional) up to 1,000 dots per second on private Enterprise deployments.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - IoT
+  - Internet of Things
+  - Telemetry
+  - Time Series
+  - MQTT
+  - REST
+  - Dashboards
+  - Device Management
+  - Analytics
+  - Industrial IoT
+  - AIoT
+url: https://raw.githubusercontent.com/api-evangelist/ubidots/refs/heads/main/apis.yml
+created: '2026-06-12'
+modified: '2026-06-12'
+specificationVersion: '0.19'
+apis:
+  - aid: ubidots:data-api-v16
+    name: Ubidots Data API v1.6
+    description: >
+      The Ubidots Data API v1.6 provides REST endpoints for sending and
+      retrieving time-series data (dots) from IoT devices. Supports device and
+      variable creation, data ingestion via HTTP POST, and historical data
+      retrieval. Authenticated via X-Auth-Token header or token URL parameter.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://docs.ubidots.com/v1.6/reference/http
+    baseURL: https://industrial.api.ubidots.com/api/v1.6
+    tags:
+      - IoT
+      - Telemetry
+      - Time Series
+      - REST
+    properties:
+      - type: Documentation
+        url: https://docs.ubidots.com/v1.6/reference/http
+  - aid: ubidots:data-api-v2
+    name: Ubidots Data API v2
+    description: >
+      The Ubidots Data API v2 adds advanced filtering and sorting, bulk
+      asynchronous operations for thousands of entities, dynamic field
+      responses, and device provisioning in a single request. Supports full
+      CRUD for Devices, Variables, Organizations, Device Groups, Device Types,
+      and Dashboards.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://docs.ubidots.com/reference/welcome
+    baseURL: https://industrial.api.ubidots.com/api/v2.0
+    tags:
+      - IoT
+      - Device Management
+      - Dashboards
+      - REST
+      - Bulk Operations
+    properties:
+      - type: Documentation
+        url: https://docs.ubidots.com/reference/welcome
+  - aid: ubidots:mqtt-api
+    name: Ubidots MQTT API
+    description: >
+      Ubidots supports MQTT for lightweight device telemetry ingestion. Devices
+      publish dots to Ubidots broker topics and subscribe to receive
+      configuration or command payloads. Subject to the same per-token 4 req/s
+      and plan-level throughput limits as the HTTP API.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://help.ubidots.com/en/collections/356495-developer-guides
+    baseURL: mqtt://industrial.api.ubidots.com
+    tags:
+      - IoT
+      - MQTT
+      - Telemetry
+      - Lightweight
+    properties:
+      - type: Documentation
+        url: https://help.ubidots.com/en/collections/356495-developer-guides
+common:
+  - type: Website
+    url: https://ubidots.com
+  - type: Documentation
+    url: https://docs.ubidots.com
+  - type: GitHubOrganization
+    url: https://github.com/ubidots
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/ubidots
+  - type: X
+    url: https://x.com/ubidots
+  - type: Blog
+    url: https://ubidots.com/blog
+  - type: Changelog
+    url: https://docs.ubidots.com/changelog
+  - type: Pricing
+    url: https://ubidots.com/pricing
+  - type: StatusPage
+    url: https://status.ubidots.com
+  - type: HelpCenter
+    url: https://help.ubidots.com
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/ubidots/refs/heads/main/plans/ubidots-plans-pricing.yml
+  - type: RateLimits
+    url: https://raw.githubusercontent.com/api-evangelist/ubidots/refs/heads/main/rate-limits/ubidots-rate-limits.yml
+  - type: FinOps
+    url: https://raw.githubusercontent.com/api-evangelist/ubidots/refs/heads/main/finops/ubidots-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

@@ -1,0 +1,118 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+provider: Ubidots
+providerId: ubidots
+created: '2026-06-12'
+modified: '2026-06-12'
+reconciled: true
+url: https://help.ubidots.com/en/articles/2093902-how-many-dots-can-i-send-to-ubidots
+headers:
+  retryAfter: Retry-After
+  rateLimitLimit: X-RateLimit-Limit
+  rateLimitRemaining: X-RateLimit-Remaining
+  rateLimitReset: X-RateLimit-Reset
+responseCodes:
+  throttled: 429
+  success: 200
+authentication:
+  method: token
+  header: X-Auth-Token
+  alternativeParam: token
+  notes: >
+    Each account has an API Key (master key used only to generate tokens) and
+    one or more Tokens (used in all API calls). Temporary tokens expire after 6
+    hours of inactivity; persistent tokens created from the profile page never
+    expire. Custom rate limits per token are configurable from Professional plan
+    and above.
+limits:
+  - name: Per-Token Request Rate
+    scope: token
+    metric: requests_per_second
+    limit: 4
+    timeFrame: second
+    configurable: true
+    configurableFrom: Professional
+    notes: >
+      Default 4 req/s per token across HTTP, MQTT, and TCP/UDP. Configurable
+      time windows of 1 second, 1 minute, or 5 minutes are available. Edit via
+      API Credentials (account tokens) or Organization settings (org tokens).
+  - name: Per-Request Payload Size
+    scope: request
+    metric: bytes
+    limit: 10000
+    timeFrame: request
+    notes: Maximum of 10,000 bytes per request body.
+  - name: Professional Sustained Throughput
+    scope: account
+    metric: dots_per_second
+    limit: 6
+    timeFrame: second
+    plan: Professional
+  - name: Professional Burst Throughput
+    scope: account
+    metric: dots_per_second
+    limit: 12
+    timeFrame: hour
+    plan: Professional
+    notes: Up to 3x burst allowed for short periods within an hourly window.
+  - name: Industrial Sustained Throughput
+    scope: account
+    metric: dots_per_second
+    limit: 20
+    timeFrame: second
+    plan: Industrial
+  - name: Industrial Burst Throughput
+    scope: account
+    metric: dots_per_second
+    limit: 40
+    timeFrame: hour
+    plan: Industrial
+  - name: Enterprise I Sustained Throughput
+    scope: account
+    metric: dots_per_second
+    limit: 50
+    timeFrame: second
+    plan: Enterprise I
+  - name: Enterprise I Burst Throughput
+    scope: account
+    metric: dots_per_second
+    limit: 100
+    timeFrame: hour
+    plan: Enterprise I
+  - name: Enterprise II Sustained Throughput
+    scope: account
+    metric: dots_per_second
+    limit: 100
+    timeFrame: second
+    plan: Enterprise II
+  - name: Enterprise II Burst Throughput
+    scope: account
+    metric: dots_per_second
+    limit: 200
+    timeFrame: hour
+    plan: Enterprise II
+  - name: Enterprise III Sustained Throughput
+    scope: account
+    metric: dots_per_second
+    limit: 200
+    timeFrame: second
+    plan: Enterprise III
+  - name: Enterprise III Burst Throughput
+    scope: account
+    metric: dots_per_second
+    limit: 400
+    timeFrame: hour
+    plan: Enterprise III
+  - name: Enterprise III Private Sustained Throughput
+    scope: account
+    metric: dots_per_second
+    limit: 1000
+    timeFrame: second
+    plan: Enterprise III Private
+    notes: Dedicated private cloud deployment.
+  - name: Enterprise III Private Burst Throughput
+    scope: account
+    metric: dots_per_second
+    limit: 2000
+    timeFrame: hour
+    plan: Enterprise III Private
