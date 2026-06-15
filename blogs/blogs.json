@@ -4,5 +4,31 @@
   "url": "https://ubidots.com/blog",
   "rss": "https://ubidots.com/blog/rss/",
   "generator": "Ghost 5.94",
-  "lastFetched": "2026-06-12"
+  "lastFetched": "2026-06-12",
+  "repo": "ubidots",
+  "feeds": [
+    {
+      "source": "https://x.com/ubidots",
+      "feed_url": "https://x.com/ubidots",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/api-evangelist/ubidots/refs/heads/main/finops/ubidots-finops.yml",
+      "feed_url": "https://raw.githubusercontent.com/api-evangelist/ubidots/refs/heads/main/finops/ubidots-finops.yml",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
+    {
+      "source": "https://ubidots.com/blog/rss/",
+      "feed_url": "https://ubidots.com/blog/rss/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-06-14T20:42:17Z"
 }
