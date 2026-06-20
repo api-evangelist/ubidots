@@ -12,7 +12,7 @@ description: >
   parameter, and throughput is gated per plan from 6 dots per second
   (Professional) up to 1,000 dots per second on private Enterprise deployments.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - IoT
   - Internet of Things
@@ -37,7 +37,7 @@ apis:
       retrieving time-series data (dots) from IoT devices. Supports device and
       variable creation, data ingestion via HTTP POST, and historical data
       retrieval. Authenticated via X-Auth-Token header or token URL parameter.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://docs.ubidots.com/v1.6/reference/http
     baseURL: https://industrial.api.ubidots.com/api/v1.6
     tags:
@@ -56,7 +56,7 @@ apis:
       responses, and device provisioning in a single request. Supports full
       CRUD for Devices, Variables, Organizations, Device Groups, Device Types,
       and Dashboards.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://docs.ubidots.com/reference/welcome
     baseURL: https://industrial.api.ubidots.com/api/v2.0
     tags:
@@ -75,7 +75,7 @@ apis:
       publish dots to Ubidots broker topics and subscribe to receive
       configuration or command payloads. Subject to the same per-token 4 req/s
       and plan-level throughput limits as the HTTP API.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://help.ubidots.com/en/collections/356495-developer-guides
     baseURL: mqtt://industrial.api.ubidots.com
     tags:
