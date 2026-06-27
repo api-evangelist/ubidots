@@ -99,7 +99,7 @@ common:
     url: https://x.com/ubidots
   - type: Blog
     url: https://ubidots.com/blog
-  - type: Changelog
+  - type: ChangeLog
     url: https://docs.ubidots.com/changelog
   - type: Pricing
     url: https://ubidots.com/pricing
@@ -115,9 +115,9 @@ common:
     url: https://raw.githubusercontent.com/api-evangelist/ubidots/refs/heads/main/finops/ubidots-finops.yml
   - type: BlogRSS
     url: https://ubidots.com/blog/rss/
-  - type: Blogs
+  - type: Blog
     url: https://raw.githubusercontent.com/api-evangelist/ubidots/refs/heads/main/blogs/blogs.json
-  - type: JsonLdContext
+  - type: JSONLDContext
     url: https://raw.githubusercontent.com/api-evangelist/ubidots/refs/heads/main/json-ld/ubidots-context.jsonld
 maintainers:
   - FN: Kin Lane
