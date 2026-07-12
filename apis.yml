@@ -87,6 +87,8 @@ apis:
       - type: Documentation
         url: https://help.ubidots.com/en/collections/356495-developer-guides
 common:
+  - type: DomainSecurity
+    url: security/ubidots-domain-security.yml
   - type: Website
     url: https://ubidots.com
   - type: Documentation
