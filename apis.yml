@@ -12,7 +12,19 @@ description: >
   parameter, and throughput is gated per plan from 6 dots per second
   (Professional) up to 1,000 dots per second on private Enterprise deployments.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: paid
+  onboarding: unknown
+  trial: true
+  try_now: false
+  public: false
+  label: Paid (free trial)
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ubidots.png
 tags:
   - IoT
   - Internet of Things
