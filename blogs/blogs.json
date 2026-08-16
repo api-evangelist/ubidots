@@ -12,14 +12,16 @@
       "feed_url": "https://x.com/ubidots",
       "title": "",
       "saved": 0,
-      "method": "none"
+      "method": "none",
+      "error": "parse_failed"
     },
     {
       "source": "https://raw.githubusercontent.com/api-evangelist/ubidots/refs/heads/main/finops/ubidots-finops.yml",
       "feed_url": "https://raw.githubusercontent.com/api-evangelist/ubidots/refs/heads/main/finops/ubidots-finops.yml",
       "title": "",
       "saved": 0,
-      "method": "none"
+      "method": "none",
+      "error": "parse_failed"
     },
     {
       "source": "https://ubidots.com/blog/rss/",
@@ -30,6 +32,6 @@
     }
   ],
   "post_count": 15,
-  "fetched": "2026-08-06T14:08:46Z",
+  "fetched": "2026-08-15T12:11:08Z",
   "agent_pulled": "2026-06-27"
 }
