@@ -40,7 +40,7 @@ tags:
 url: https://raw.githubusercontent.com/api-evangelist/ubidots/refs/heads/main/apis.yml
 created: '2026-06-12'
 modified: '2026-06-12'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
   - aid: ubidots:data-api-v16
     name: Ubidots Data API v1.6
