@@ -12,6 +12,17 @@ description: >
   parameter, and throughput is gated per plan from 6 dots per second
   (Professional) up to 1,000 dots per second on private Enterprise deployments.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: paid
   onboarding: unknown
